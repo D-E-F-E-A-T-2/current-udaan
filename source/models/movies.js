@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 
 const movieSchema = new mongoose.Schema({
-    name: {
+    name: { // To Easily Find a Movie
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     genre: {
         type: String,
